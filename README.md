@@ -76,6 +76,26 @@ ask --search-backend ddg --max-results 5 bun typescript runtime
 
 > `--provider` and `--search-backend` are mutually exclusive.
 
+## Shortcuts
+
+Skip the verbose flags:
+
+| Instead of | Use |
+|:-----------|:----|
+| `--provider claude` | `--claude` |
+| `--search-backend ddg` | `--ddg` |
+
+```bash
+# These are equivalent:
+ask --provider claude what is rust
+ask --claude what is rust
+ask what is rust              # claude is default
+
+# These are equivalent:
+ask --search-backend ddg best keyboard
+ask --ddg best keyboard
+```
+
 ## Build
 
 ```bash
