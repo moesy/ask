@@ -1,0 +1,12 @@
+import { BaseLLMProvider } from "./base";
+import type { LLMOptions } from "../types";
+import { EXIT_CODES } from "../types";
+
+export class GeminiProvider extends BaseLLMProvider {
+  name = "gemini";
+
+  async execute(_prompt: string, _options: LLMOptions): Promise<void> {
+    console.error("Gemini provider not yet implemented");
+    process.exit(EXIT_CODES.GENERAL_ERROR);
+  }
+}
